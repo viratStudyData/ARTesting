@@ -1,0 +1,6 @@
+framework module Pods_ARCLTests {
+  umbrella header "Pods-ARCLTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

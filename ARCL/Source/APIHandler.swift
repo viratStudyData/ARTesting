@@ -102,7 +102,7 @@ class APIHandler: NSObject {
             {
                 let httpResponse = response as! HTTPURLResponse
                 
-                print("Http Response is: \(httpResponse)")
+//                print("Http Response is: \(httpResponse)")
                 if httpResponse.statusCode == 200
                 {
                     do
@@ -114,7 +114,7 @@ class APIHandler: NSObject {
                         
                         DispatchQueue.main.async(execute: {
                             
-                            print("Json data is: \(jsonData)")
+//                            print("Json data is: \(jsonData)")
                             
                             success(jsonData as! [String : AnyObject])
                            

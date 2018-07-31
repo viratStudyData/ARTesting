@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        print("NEW SESSION")
 
         UIApplication.shared.isIdleTimerDisabled = true
 
@@ -23,12 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
 
         if #available(iOS 11.0, *) {
-            let vc = ViewController()
+            let vc = HomeVC()
             self.window!.rootViewController = vc
         } else {
             self.window!.rootViewController = NotSupportedViewController()
         }
-
+        GMSServices.provideAPIKey(kGoogleKey)
         return true
     }
 }
